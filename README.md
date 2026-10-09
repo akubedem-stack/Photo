@@ -101,6 +101,3 @@ photo/
 
 
 
-<p align="center">
-  <strong>📷 Photo</strong> — учебный проект 2024
-</p>
