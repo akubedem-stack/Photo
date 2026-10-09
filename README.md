@@ -18,7 +18,7 @@
 
 ## 📖 О проекте
 
-**Photo** — учебный проект по пособию Москалевой Ю.П.  
+**Photo** — учебный проект по пособию.
 Веб-приложение на полном стеке JavaScript: от простейшего сервера на Express до системы аутентификации с сессиями в MongoDB.
 
 **Референс:** [akubedem-stack.github.io/my-site](https://akubedem-stack.github.io/my-site/)
