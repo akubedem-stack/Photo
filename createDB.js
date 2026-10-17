@@ -2,12 +2,12 @@ const { MongoClient } = require('mongodb');
 var data = require("./data.js").data;
 const url = 'mongodb://localhost:27017';
 const client = new MongoClient(url);
-const dbName = 'ph2026'; // Ваша база
+const dbName = 'ph2026'; 
 
 async function main() {
   await client.connect();
   const db = client.db(dbName);
-  const collection = db.collection('photos'); // Коллекция photos
+  const collection = db.collection('photos'); 
   const insertResult = await collection.insertMany(data);
   console.log('Inserted documents =>', insertResult);
   return 'done.';
