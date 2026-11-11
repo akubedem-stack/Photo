@@ -11,4 +11,9 @@ router.get('/', function(req, res, next) {
   router.get('/logreg', function(req, res, next) {
   res.render('logreg', { title: 'Вход', error: null });
 });
+  /* POST login/registration page. */
+router.post('/logreg', function(req, res, next) {
+  console.log(req.body); // Выводим данные в консоль терминала
+  res.send("Данные получены! Посмотрите в терминал VS Code.");
+});
 module.exports = router;
