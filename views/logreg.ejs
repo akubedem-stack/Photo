@@ -1,0 +1,23 @@
+<% layout('./layout/page.ejs') %>
+
+<div class="row justify-content-center mt-5">
+  <div class="col-md-5">
+    <div class="card shadow p-4">
+      <h2 class="text-center mb-4">Регистрация и вход</h2>
+      <form action="/logreg" method="post">
+        <div class="mb-3">
+          <label class="form-label">Имя</label>
+          <input type="text" name="username" class="form-control" placeholder="Введите имя" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Пароль</label>
+          <input type="password" name="password" class="form-control" placeholder="Введите пароль" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Войти</button>
+      </form>
+      <% if(error) { %>
+        <div class="alert alert-danger mt-3 text-center"><%= error %></div>
+      <% } %>
+    </div>
+  </div>
+</div>
