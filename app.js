@@ -37,6 +37,7 @@ app.use(function(req, res, next) {
 app.use(require("./middlewares/createMenu.js"));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(require("./middlewares/createUser.js"));
 app.use('/', indexRouter);
 var photosRouter = require('./routes/photos');
 app.use('/photos', photosRouter);

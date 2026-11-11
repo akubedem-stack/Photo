@@ -1,3 +1,8 @@
+<% if(user) { %>
+  <h1 class="text-success">Привет, <%= user.username %>!</h1>
+<% } else { %>
+  <h1>Привет, гость!</h1>
+<% } %>
 <% layout('./layout/page.ejs') %>
 <h1><%= title %></h1>
 <p>Welcome to <%= title %></p>
