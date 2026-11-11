@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var Photo = require('../models/photo').Photo; // Подключаем модель
+var Photo = require('../models/photo').Photo; 
+var checkAuth = require("../middlewares/checkAuth.js"); // Подключаем проверку
 
-router.get("/:slug", async function(req, res, next) {
+
+router.get("/:slug", checkAuth, async function(req, res, next) {
   // Ищем в базе фотосессию по её slug
   var photos = await Photo.find({slug: req.params.slug});
   
